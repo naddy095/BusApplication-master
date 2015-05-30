@@ -54,6 +54,7 @@ public class PickArea extends ListActivity {
                 // When clicked, show a toast with the TextView text
                 Intent intent = new Intent(context,MainActivity.class);
                 intent.putExtra("area", ((TextView) view).getText());
+                // Use Bundle
                 startActivity(intent);
              /*   Toast.makeText(getApplicationContext(),
                         ((TextView) view).getText(), Toast.LENGTH_SHORT).show();*/
