@@ -23,6 +23,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     LinearLayout longJourney;
 	final Context context=this;
     LinearLayout cityFromSelection;
+    //pawan
+    //pawan
     String journeyType = "";
 
 	@Override
