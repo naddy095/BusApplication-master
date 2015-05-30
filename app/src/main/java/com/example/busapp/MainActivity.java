@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 	final Context context=this;
     LinearLayout cityFromSelection;
     String journeyType = "";
-
+//sahil
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
