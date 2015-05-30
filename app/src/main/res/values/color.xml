@@ -1,0 +1,8 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+        <color name="color_title">#E7AD30</color>
+		<color name="color_black">#000000</color>
+		<color name="color_title2">#E7AD30</color>
+		
+</resources>

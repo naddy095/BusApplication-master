@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+
+    <!-- Search / will display always -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="ifRoom"
+        android:title="@string/app_name"
+        yourapp:showAsAction="always"/>
+
+    <!-- Location Found -->
+    <item
+        android:id="@+id/action_location_found"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="ifRoom"
+        android:title="@string/app_name"/>
+
+    <!-- Refresh -->
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="ifRoom"
+        android:title="@string/app_name"/>
+
+    <!-- Help -->
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="never"
+        android:title="@string/app_name"/>
+
+    <!-- Check updates -->
+    <item
+        android:id="@+id/action_check_updates"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="never"
+        android:title="@string/app_name"/>
+
+</menu>
