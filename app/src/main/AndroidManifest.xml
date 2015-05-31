@@ -35,6 +35,10 @@
             android:name=".PickArea"
             android:label="@string/title_activity_pick_area" >
         </activity>
+        <activity
+        android:name=".CalendarView"
+        android:label="@string/title_activity_pick_area" >
+    </activity>
     </application>
 
 </manifest>

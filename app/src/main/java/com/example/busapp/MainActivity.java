@@ -1,5 +1,4 @@
 package com.example.busapp;
-
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
@@ -15,12 +14,17 @@ import android.view.View.OnLongClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-	LinearLayout datePicker;
+	LinearLayout calendarPickerLayout;
     LinearLayout shortJourney;
     LinearLayout longJourney;
+    TextView date;
+    TextView day;
+    TextView month;
 	final Context context=this;
     LinearLayout cityFromSelection;
     String journeyType = "";
@@ -31,12 +35,28 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 		android.support.v7.app.ActionBar ab =getSupportActionBar();
 		ab.setDisplayShowHomeEnabled(true);
 		ab.setIcon(R.drawable.ic_launcher);
-		setContentView(R.layout.activity_main);
-        cityFromSelection = (LinearLayout)findViewById(R.id.pickAreaLL);
-        cityFromSelection.setOnClickListener(this);
-		datePicker = (LinearLayout)findViewById(R.id.datePickerLayout);
 
-        //journey tabs
+
+
+        Date firstPageDate=new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String currentDate = sdf.format(firstPageDate);
+
+        Intent i = getIntent();
+        Bundle bundle = i.getExtras();
+        if(bundle!=null){
+            currentDate = bundle.getString("C_Date");
+        }
+        Log.i("ll", currentDate);
+
+		setContentView(R.layout.activity_main);
+        date=(TextView)findViewById(R.id.tvDate);
+        day=(TextView)findViewById(R.id.tvDay);
+        month=(TextView)findViewById(R.id.tvMonth);
+        cityFromSelection = (LinearLayout)findViewById(R.id.pickAreaLL);
+        calendarPickerLayout = (LinearLayout)findViewById(R.id.calendarPickerLayout);
+        cityFromSelection.setOnClickListener(this);
+        calendarPickerLayout.setOnClickListener(this);
         shortJourney = (LinearLayout)findViewById(R.id.shortJourneyLL);
         longJourney = (LinearLayout)findViewById(R.id.longJourneyLL);
         shortJourney.setOnClickListener(this);
@@ -46,9 +66,26 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         if(selectedArea !=null && !selectedArea.isEmpty()){
             ((TextView)findViewById(R.id.areaText)).setText(selectedArea);
         }
+
+        setDateInUI(currentDate);
+        
+
+/*
+        tr{
+            changedPatternCurrent = formatter.parse(currentDate);
+        }catch(ParseException e)
+            e.printStackTrace();
+        }
+        Log.i("ll",changedPatternCurrent+"  changedPatternCurrent");
+
+        date.setText(selectedArea.split("-")[0]);*/
+
+
 	}
 
-	@Override
+
+
+    @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
@@ -78,6 +115,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         LinearLayout LL;
         switch(view.getId())
         {
+            case R.id.calendarPickerLayout :
+                Intent in = new Intent(context,CalendarView.class);
+                startActivity(in);
+                break;
             case R.id.pickAreaLL :
                 Intent intent = new Intent(context,PickArea.class);
                 startActivity(intent);
@@ -106,6 +147,28 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
         }
+    }
+
+    public void setDateInUI(String dateInUI) {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dayFormatter = new SimpleDateFormat("EEEE");
+        SimpleDateFormat monthFormatter = new SimpleDateFormat("MMM");
+        try
+        {
+            String dayToDisplay = dayFormatter.format(formatter.parse(dateInUI));
+            String monthToDisplay = monthFormatter.format(formatter.parse(dateInUI));
+            Log.d("dateL",dayToDisplay + "month" +monthFormatter.format(formatter.parse(dateInUI)));
+            day.setText(dayToDisplay);
+            month.setText(monthToDisplay);
+            date.setText(dateInUI.split("-")[2]);
+
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
 
    /* @Override

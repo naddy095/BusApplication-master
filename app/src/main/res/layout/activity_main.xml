@@ -107,7 +107,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/datePickerLayout"
+        android:id="@+id/calendarPickerLayout"
         android:layout_width="350dp"
         android:layout_height="30dp"
         android:layout_marginBottom="10dp"
@@ -119,18 +119,23 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/date"
-            android:layout_width="80dp"
+            android:id="@+id/tvDate"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:hint="18th "
             android:longClickable="false"
             android:textSize="25dp" />
 
         <TextView
-            android:id="@+id/day"
-            android:layout_width="match_parent"
+            android:id="@+id/tvDay"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:hint="THURSDAY"
+            android:longClickable="false"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/tvMonth"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
             android:longClickable="false"
             android:textSize="25dp" />
     </LinearLayout>

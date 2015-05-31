@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="E:\workspaces\android studio\BusApplication-master\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jar="/home/pawan/Desktop/workspace/BusApplication-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="E:\workspaces\android studio\BusApplication-master\app\build\intermediates\pre-dexed\debug\classes-704c376ef1f41a1dd95f2b9f5a5d9c2a23bb9455.jar" />
+        <dex dex="/home/pawan/Desktop/workspace/BusApplication-master/app/build/intermediates/pre-dexed/debug/classes-07a1b72c503e1405e3144f056d03932ba87a3a47.jar" />
     </item>
     <item
-        jar="E:\workspaces\android studio\BusApplication-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
-        jumboMode="false"
-        revision="22.0.0"
-        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="E:\workspaces\android studio\BusApplication-master\app\build\intermediates\pre-dexed\debug\classes-bff7f8f4cb8c3bee6580c50c8ef0c9dbf0a6aa0a.jar" />
-    </item>
-    <item
-        jar="E:\workspaces\android studio\BusApplication-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jar="/home/pawan/Desktop/workspace/BusApplication-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="E:\workspaces\android studio\BusApplication-master\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-e7c9a473eaf71b379a08196b8fa8b5622db3fb82.jar" />
+        <dex dex="/home/pawan/Desktop/workspace/BusApplication-master/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-bad42b67c05ecd76d8f0e5ef31069ee77fa53432.jar" />
     </item>
     <item
-        jar="C:\Users\nadeem\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jar="/home/pawan/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="22.0.0"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="E:\workspaces\android studio\BusApplication-master\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-54f0266f70cc0f5d6b7b835f4ae83176a16b49d0.jar" />
+        <dex dex="/home/pawan/Desktop/workspace/BusApplication-master/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-12f433a2d2a6f3e1b88567d55d5f5b3f1da8fbb0.jar" />
+    </item>
+    <item
+        jar="/home/pawan/Desktop/workspace/BusApplication-master/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/home/pawan/Desktop/workspace/BusApplication-master/app/build/intermediates/pre-dexed/debug/classes-a50a5252584aa5decb85f816b617c10a211bf0ff.jar" />
     </item>
 
 </items>
