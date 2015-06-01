@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -22,12 +23,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 	LinearLayout calendarPickerLayout;
     LinearLayout shortJourney;
     LinearLayout longJourney;
-    TextView date;
+    TextView dateTV;
     TextView day;
     TextView month;
 	final Context context=this;
     LinearLayout cityFromSelection;
     String journeyType = "";
+    String area ="";
+    String date = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,22 +38,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 		android.support.v7.app.ActionBar ab =getSupportActionBar();
 		ab.setDisplayShowHomeEnabled(true);
 		ab.setIcon(R.drawable.ic_launcher);
-
-
-
-        Date firstPageDate=new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String currentDate = sdf.format(firstPageDate);
-
-        Intent i = getIntent();
-        Bundle bundle = i.getExtras();
-        if(bundle!=null){
-            currentDate = bundle.getString("C_Date");
-        }
-        Log.i("ll", currentDate);
-
-		setContentView(R.layout.activity_main);
-        date=(TextView)findViewById(R.id.tvDate);
+        setContentView(R.layout.activity_main);
+        //ui attach
+        dateTV=(TextView)findViewById(R.id.tvDate);
         day=(TextView)findViewById(R.id.tvDay);
         month=(TextView)findViewById(R.id.tvMonth);
         cityFromSelection = (LinearLayout)findViewById(R.id.pickAreaLL);
@@ -61,29 +51,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         longJourney = (LinearLayout)findViewById(R.id.longJourneyLL);
         shortJourney.setOnClickListener(this);
         longJourney.setOnClickListener(this);
-        Intent intent = getIntent();
-        String selectedArea = intent.getStringExtra("area");
-        if(selectedArea !=null && !selectedArea.isEmpty()){
-            ((TextView)findViewById(R.id.areaText)).setText(selectedArea);
-        }
 
-        setDateInUI(currentDate);
-        
-
-/*
-        tr{
-            changedPatternCurrent = formatter.parse(currentDate);
-        }catch(ParseException e)
-            e.printStackTrace();
-        }
-        Log.i("ll",changedPatternCurrent+"  changedPatternCurrent");
-
-        date.setText(selectedArea.split("-")[0]);*/
-
+        // Init
+        InitializeData();
 
 	}
 
-
+    private void InitializeData() {
+        Date firstPageDate= new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String currentDate = sdf.format(firstPageDate);
+        setDateInUI(currentDate);
+    }
 
     @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,11 +96,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         {
             case R.id.calendarPickerLayout :
                 Intent in = new Intent(context,CalendarView.class);
-                startActivity(in);
+                startActivityForResult(in, 2);
                 break;
             case R.id.pickAreaLL :
                 Intent intent = new Intent(context,PickArea.class);
-                startActivity(intent);
+                startActivityForResult(intent, 1);
                 break;
             case R.id.shortJourneyLL :
                 shortTv = (TextView)findViewById(R.id.shortJourneyTV);
@@ -160,28 +139,23 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             Log.d("dateL",dayToDisplay + "month" +monthFormatter.format(formatter.parse(dateInUI)));
             day.setText(dayToDisplay);
             month.setText(monthToDisplay);
-            date.setText(dateInUI.split("-")[2]);
-
-
+            dateTV.setText(dateInUI.split("-")[2]);
         }
         catch (Exception e)
         {
             e.printStackTrace();
         }
-
     }
 
-   /* @Override
-    public boolean onTouch(View view, MotionEvent motionEvent) {
-        switch(view.getId())
-        {
-            case R.id.fromLayout :
-                Toast.makeText(context,"From Clicked",Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.toLayout :
-                Toast.makeText(context,"To Clicked",Toast.LENGTH_SHORT).show();
-                break;
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == 1){
+            String area = data.getStringExtra("area");
+            ((TextView)findViewById(R.id.areaText)).setText(area);
+        }else if(resultCode == 2){
+            String date = data.getStringExtra("C_Date");
+            setDateInUI(date);
         }
-        return true;
-    }*/
+    }
 }

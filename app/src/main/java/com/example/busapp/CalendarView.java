@@ -99,13 +99,15 @@ public class CalendarView extends ActionBarActivity {
 				((CalendarAdapter) parent.getAdapter()).setSelected(v);
 
 				Boolean tmp=	showToast(selectedGridDate);
-				
+
 				if (tmp==true) {
 					Intent intent =new Intent(context,MainActivity.class);
 					intent.putExtra("C_Date",selectedGridDate);
-					startActivity(intent);
+					//startActivity(intent);
+                    setResult(2,intent);
+                    finish();
 				}
-				
+
 				Log.i("pp", selectedGridDate);
 			}
 		});

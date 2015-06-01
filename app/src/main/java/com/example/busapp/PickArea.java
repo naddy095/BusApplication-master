@@ -55,9 +55,12 @@ public class PickArea extends ListActivity {
                 Intent intent = new Intent(context,MainActivity.class);
                 intent.putExtra("area", ((TextView) view).getText());
                 // Use Bundle
-                startActivity(intent);
+                //startActivity(intent);
+
              /*   Toast.makeText(getApplicationContext(),
                         ((TextView) view).getText(), Toast.LENGTH_SHORT).show();*/
+                setResult(1,intent);
+                finish();
             }
         });
     }
