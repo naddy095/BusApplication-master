@@ -9,6 +9,8 @@
 	<string name="modify">Modify Details</string>
 	<string name="search">Search</string>
     <string name="title_activity_pick_area">PickArea</string>
-
+    <string name="title_activity_calendar">Calendar</string>
+    <string name="time_picker">Select Time</string>
     <string name="hello_world">Hello world!</string>
+
 </resources>
