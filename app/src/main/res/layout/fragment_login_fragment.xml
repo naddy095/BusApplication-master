@@ -1,0 +1,125 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.example.busapp.LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C4C4C4"
+
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="95dp"
+            android:layout_weight="0.03">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:id="@+id/ulogin"
+                android:text="Login Here"
+                android:textColor="#0000FF"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_horizontal|center_vertical"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="322dp"
+                android:weightSum="1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="UserName"
+                    android:textColor="#999999"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/t1"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="120dp"
+                    android:id="@+id/uname"
+                    android:background="#ffffff"
+                    android:layout_toRightOf="@+id/t1"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Password"
+                    android:textColor="#999999"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/t2"
+                    android:layout_below="@+id/t2"
+
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="120dp"
+                    android:id="@+id/pwd"
+                    android:background="#ffffff"
+                    android:layout_toRightOf="@+id/t1"
+                    />
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/login"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/pwd"
+                    android:layout_gravity="center"
+                    android:layout_margin="30dp"
+                    android:text="LOGIN"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/newuser"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@+id/pwd"
+                    android:layout_gravity="center"
+                    android:textColor="#4169E1"
+                    android:text="NEW HERE? SIGN UP"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
