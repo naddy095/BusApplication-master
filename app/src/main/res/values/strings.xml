@@ -12,11 +12,17 @@
     <string name="title_activity_calendar">Calendar</string>
     <string name="time_picker">Select Time</string>
     <string name="hello_world">Hello world!</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="phone_no">Phone</string>
 
     <string-array name="fragment_drawer_items">
         <item>Daily Package</item>
         <item>My Rides</item>
-        <item>Login</item>
+        <item>Login/SignUp</item>
         <item>SIGN OUT</item>
 
 

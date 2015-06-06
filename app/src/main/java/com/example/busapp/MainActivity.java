@@ -95,10 +95,12 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 break;
 
             case 3 :
-
+                SignUpFragment signUpFragment = new SignUpFragment();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.frameLayout,signUpFragment);
+                fragmentTransaction.commit();
                 break;
         }
-
     }
 
     @Override
