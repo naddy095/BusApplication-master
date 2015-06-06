@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.busapp.LoginFragment">
 
-    <LinearLayout
+ <!--   <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:text="@string/sign_up"
             android:id="@+id/btnSignUp" />
-    </LinearLayout>
+    </LinearLayout>-->
 
 
     <LinearLayout
@@ -103,11 +103,24 @@
                 android:gravity="left|center_vertical"
                 android:background="#00000000"
                 android:textColor="#999999"
+                android:inputType="textPassword"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:hint="@string/password"
                 android:id="@+id/tvPassword" />/>
         </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
+    <Button
+        android:id="@+id/loginBtnInSignUp"
+        android:layout_width="342dp"
+        android:layout_height="50dp"
+        android:text="@string/login" />
+
+     <Button
+     android:id="@+id/signUpBtnInSignUp"
+     android:layout_width="342dp"
+     android:layout_marginTop="15dp"
+     android:layout_height="50dp"
+     android:text="@string/sign_up" />
+</LinearLayout>
 </FrameLayout>

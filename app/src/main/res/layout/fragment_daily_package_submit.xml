@@ -20,7 +20,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/userNameLL"
+            android:id="@+id/dailyPackageSubmitNameLL"
             android:layout_width="342dp"
             android:layout_height="40dp"
             android:layout_marginLeft="4dp"
@@ -32,7 +32,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/username"
+                android:src="@drawable/name"
                 />
             <EditText
                 android:layout_width="match_parent"
@@ -44,8 +44,8 @@
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:background="#00000000"
-                android:hint="@string/username"
-                android:id="@+id/tvUserName"/>
+                android:hint="@string/name"
+                android:id="@+id/tvdailyPackageSubmitName"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -57,7 +57,7 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/passwordLL"
+            android:id="@+id/dailyPackageSubmitEmailLL"
             android:layout_width="342dp"
             android:layout_height="40dp"
             android:layout_marginLeft="4dp"
@@ -81,8 +81,8 @@
                 android:textColor="#999999"
                 android:textSize="20sp"
                 android:textStyle="normal"
-                android:hint="@string/password"
-                android:id="@+id/tvPassword" />/>
+                android:hint="@string/email"
+                android:id="@+id/tvPackageSubmitEmail" />
         </LinearLayout>
     </LinearLayout>
 
@@ -94,45 +94,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/nameLL"
-                android:layout_width="342dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/shape"
-                android:gravity="center"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/name"
-                    />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="0dp"
-                    android:gravity="left|center_vertical"
-                    android:textColor="#999999"
-                    android:textSize="20sp"
-                    android:textStyle="normal"
-                    android:background="#00000000"
-                    android:hint="@string/name"
-                    android:id="@+id/tvName"/>
-            </LinearLayout>
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:id="@+id/phoneNumberLL"
+                android:id="@+id/PackageSubmitPhoneLL"
                 android:layout_width="342dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="4dp"
@@ -156,23 +118,58 @@
                     android:textSize="20sp"
                     android:textStyle="normal"
                     android:background="#00000000"
+                    android:inputType="phone"
                     android:hint="@string/phone_no"
-                    android:id="@+id/tvPhoneNumber"/>
+                    android:id="@+id/tvPackageSubmitPhone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/PackageSubmitAddressLL"
+                android:layout_width="342dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/phone"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="left|center_vertical"
+                    android:textColor="#999999"
+                    android:textSize="20sp"
+                    android:textStyle="normal"
+                    android:background="#00000000"
+                    android:hint="@string/pick_up_address"
+                    android:lines="5"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:id="@+id/tvPackageSubmitAddress"/>
             </LinearLayout>
         </LinearLayout>
         <Button
-            android:id="@+id/signUpBtnInSignUp"
-            android:layout_width="342dp"
-            android:layout_marginTop="15dp"
-            android:layout_height="50dp"
-            android:text="@string/sign_up"
-
-            />
-        <Button
             android:id="@+id/loginBtnInSignUp"
+            android:layout_marginTop="30dp"
             android:layout_width="342dp"
             android:layout_height="50dp"
-            android:text="@string/login"
+            android:text="@string/cnfm_booking"
             />
     </LinearLayout>
 </FrameLayout>

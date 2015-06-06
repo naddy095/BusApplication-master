@@ -26,19 +26,33 @@ public class SplashScreenActivity extends Activity {
 		Timer RunSplash = new Timer();
  
 		// Task to do when the timer ends
-		TimerTask ShowSplash = new TimerTask() {
+		//TimerTask ShowSplash = new TimerTask() {
+			Thread th = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				// Close SplashScreenActivity.class
-				finish();
- 
-				// Start MainActivity.class
-				Intent myIntent = new Intent(SplashScreenActivity.this,MainActivity.class);
-				startActivity(myIntent);
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+                                            /*
+                                             * We are creating this new thread because we don’t
+                                             * want our main thread to stop working for that
+                                             * time as our android stop working and some time
+                                             * application will crashes
+                                             */
+					e.printStackTrace();
+				}
+				finally {
+					Intent i = new Intent(SplashScreenActivity.this,
+							MainActivity.class);
+					startActivity(i);
+					finish();
+				}
+
 			}
-		};
+		});
  
 		// Start the timer
-		RunSplash.schedule(ShowSplash, Delay);
+		//RunSplash.schedule(ShowSplash, Delay);
+		th.start(); // start the thread
 	}
 }

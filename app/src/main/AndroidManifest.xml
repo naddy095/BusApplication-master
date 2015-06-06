@@ -37,7 +37,7 @@
             android:label="@string/title_activity_pick_area"
             android:screenOrientation="portrait">
         </activity>
-       <!-- <activity
+        <activity
             android:name=".PickArea"
             android:label="@string/title_activity_pick_area" >
         </activity>
@@ -45,7 +45,6 @@
             android:name=".CalendarView"
             android:label="@string/title_activity_calendar" >
         </activity>
-        -->
     </application>
 
 </manifest>

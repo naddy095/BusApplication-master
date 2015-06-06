@@ -17,14 +17,17 @@
     <string name="login">Log In</string>
     <string name="sign_up">Sign Up</string>
     <string name="name">Name</string>
+    <string name="email">E-Mail</string>
+    <string name="pick_up_address">Pickup Address</string>
     <string name="phone_no">Phone</string>
+    <string name="cnfm_booking">Confirm Booking</string>
 
     <string-array name="fragment_drawer_items">
         <item>Daily Package</item>
         <item>My Rides</item>
         <item>Login/SignUp</item>
         <item>SIGN OUT</item>
-
+        <item>Daily Package Submit</item>
 
     </string-array>
 
