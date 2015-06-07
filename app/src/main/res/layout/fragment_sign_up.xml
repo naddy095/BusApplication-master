@@ -45,7 +45,7 @@
                 android:textStyle="normal"
                 android:background="#00000000"
                 android:hint="@string/username"
-                android:id="@+id/tvUserName"/>
+                android:id="@+id/edUserName"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -82,7 +82,8 @@
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:hint="@string/password"
-                android:id="@+id/tvPassword" />/>
+                android:inputType="textPassword"
+                android:id="@+id/edPassword" />/>
         </LinearLayout>
     </LinearLayout>
 
@@ -119,7 +120,7 @@
                     android:textStyle="normal"
                     android:background="#00000000"
                     android:hint="@string/name"
-                    android:id="@+id/tvName"/>
+                    android:id="@+id/edName"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -157,7 +158,8 @@
                     android:textStyle="normal"
                     android:background="#00000000"
                     android:hint="@string/phone_no"
-                    android:id="@+id/tvPhoneNumber"/>
+                    android:inputType="phone"
+                    android:id="@+id/edPhoneNumber"/>
             </LinearLayout>
         </LinearLayout>
         <Button

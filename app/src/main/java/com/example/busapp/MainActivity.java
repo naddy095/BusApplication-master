@@ -94,14 +94,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
                 fragmentTransaction.commit();
                 break;
 
-            case 3 :
-                SignUpFragment signUpFragment = new SignUpFragment();
-                fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frameLayout,signUpFragment);
-                fragmentTransaction.commit();
-                break;
 
-            case 4 :
+            case 3 :
                 DailyPackageSubmitFragment dailyPackageSubmitFragment = new DailyPackageSubmitFragment();
                 fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frameLayout,dailyPackageSubmitFragment);
